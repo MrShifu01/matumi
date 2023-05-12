@@ -1,9 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '../layouts/Layout.astro';
+import Showcase from '../components/Showcase.astro';
+import Features from '../components/Features.astro';
 ---
 
-<Layout title="Matumi Corp">
-	<h1 >Hello World!</h1>
+<Layout>
+	<Showcase showExtra={true} />
+	<Features />
+	
+	<section class="page-content">
+		<div class="container">
+			<h2>Broad-Based Black Economic Empowerment (B-BBEE)</h2>
+			<p>
+				For clients seeking optimally structured and financed transactions with B-BBEE investors that can add long term strategic and financial value to the company.
+			</p>
+		</div>
+	</section>
 </Layout>
-
-

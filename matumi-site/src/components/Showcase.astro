@@ -1,0 +1,77 @@
+---
+import logos from '../images/framework-logos.png'
+import logosSmall from '../images/framework-logos-small.png'
+
+export interface Props {
+  heading?: string;
+  text?: string;
+  showExtra?: boolean;
+}
+
+const { heading = "Matumi Corporate Advisers", text="Matumi is a boutique M&A advisory firm that provides end-to-end merger and acquisition services to buyers & sellers. We are active across most industry sectors including healthcare, logistics & technology.", showExtra = false } = Astro.props as Props;
+---
+
+<section class="showcase">
+  <div class="showcase-text">
+    <h1>{heading}</h1>
+    <p>
+      {text}
+    </p>
+  </div>
+
+  {showExtra && <>
+    <div class="showcase-img">
+    <img class="logos" src={logos} alt="" />
+    <img class="logos-small" src={logosSmall} alt="" />
+  </div>
+
+  <p class="showcase-demo">
+    <small>We take full responsibility for the origination, facilitation & execution of all M&A transactions & maximise execution success by running an efficient & highly targeted transaction process.</small>
+  </p>
+  </>}
+</section>
+
+<style>
+  .showcase {
+  height: auto;
+  background-image: linear-gradient(to bottom, var(--color-primary),  var(--color-secondary));
+  padding: 30px;
+}
+
+.showcase-blog {
+  min-height: 300px;
+}
+
+.showcase-text {
+  max-width: 500px;
+  color: #fff;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.showcase h1 {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.showcase p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.showcase-img {
+  text-align: center;
+}
+
+.showcase-img img {
+  border-radius: 10px;
+  margin: auto;
+}
+
+.showcase-demo {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+</style>

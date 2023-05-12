@@ -1,11 +1,13 @@
 ---
-import Header from '../components/Header.astro'
-import '../styles/global.css'
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
 export interface Props {
-    title: string
+  title?: string;
 }
 
-const {title} = Astro.props as Props
+const { title = 'Astro Crash Course' } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -22,5 +24,6 @@ const {title} = Astro.props as Props
   <body>
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>

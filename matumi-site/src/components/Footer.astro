@@ -1,0 +1,60 @@
+<footer class="footer">
+  <div class="container">
+    <div class=footer-info>
+      <h3>Matumi Corporate Advisers &copy; 2023</h3>
+    </div>
+    <div>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/team">Team</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .footer a {
+    color: #fff;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer div:nth-child(1) {
+    text-align: left;
+  }
+
+
+  @media (max-width: 500px) {
+    .footer div:nth-child(2) {
+      display: none;
+    }
+  }
+</style>
